@@ -1,0 +1,527 @@
+2021-02-02 13:40:47.292  INFO 11788 --- [restartedMain] c.c.d.DatabaseServerApplication          : The following profiles are active: dev
+2021-02-02 13:40:50.017  INFO 11788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-02 13:40:50.071  INFO 11788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2021-02-02 13:40:50.280  WARN 11788 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-02-02 13:40:50.430  INFO 11788 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0be08c42-9814-3ef8-b116-a9e20875f629
+2021-02-02 13:40:52.413  INFO 11788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9500 (http)
+2021-02-02 13:40:52.420  INFO 11788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-02 13:40:52.421  INFO 11788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-02 13:40:52.634  INFO 11788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-02 13:40:52.634  INFO 11788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5324 ms
+2021-02-02 13:40:52.757  WARN 11788 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-02-02 13:40:52.758  INFO 11788 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-02-02 13:40:52.898  INFO 11788 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4b5c0a1c
+2021-02-02 13:40:53.348  INFO 11788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-02 13:40:53.975  INFO 11788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-02 13:40:53.983  INFO 11788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:mydb'
+2021-02-02 13:40:54.297  INFO 11788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-02 13:40:54.339  INFO 11788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-02-02 13:40:54.495  INFO 11788 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-02 13:40:54.808  INFO 11788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-02 13:40:55.793 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists address CASCADE 
+2021-02-02 13:40:55.796 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists cart CASCADE 
+2021-02-02 13:40:55.796 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists delivery_history CASCADE 
+2021-02-02 13:40:55.797 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists order_main CASCADE 
+2021-02-02 13:40:55.797 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists payment_entry CASCADE 
+2021-02-02 13:40:55.797 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists product_category CASCADE 
+2021-02-02 13:40:55.797 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists product_info CASCADE 
+2021-02-02 13:40:55.797 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists product_in_order CASCADE 
+2021-02-02 13:40:55.798 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-02-02 13:40:55.798 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user_details CASCADE 
+2021-02-02 13:40:55.798 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists address_id_sequence
+2021-02-02 13:40:55.799 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists category_id_sequence
+2021-02-02 13:40:55.800 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists delivery_id_sequence
+2021-02-02 13:40:55.800 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists order_id_sequence
+2021-02-02 13:40:55.800 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists payment_id_sequence
+2021-02-02 13:40:55.801 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists product_id_sequence
+2021-02-02 13:40:55.801 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists product_order_id_sequence
+2021-02-02 13:40:55.801 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists user_id_sequence
+2021-02-02 13:40:55.803 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence address_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.806 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence category_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.807 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence delivery_id_sequence start with 100001 increment by 1
+2021-02-02 13:40:55.807 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence order_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.808 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence payment_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.808 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence product_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.808 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence product_order_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.809 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create sequence user_id_sequence start with 100000 increment by 1
+2021-02-02 13:40:55.810 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table address (address_id bigint not null, area varchar(50), city varchar(50), pincode varchar(6), state varchar(50), primary key (address_id))
+2021-02-02 13:40:55.816 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table cart (user_details_id bigint not null, primary key (user_details_id))
+2021-02-02 13:40:55.817 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table delivery_history (delivery_id bigint not null, order_id bigint, order_status varchar(255), updated_on bigint, primary key (delivery_id))
+2021-02-02 13:40:55.818 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table order_main (order_id bigint not null, buyer_address varchar(255), buyer_city varchar(255), buyer_email varchar(255), buyer_name varchar(255), buyer_phone varchar(255), buyer_pincode varchar(255), buyer_state varchar(255), delivery_charge decimal(19,2), discounted_amount decimal(19,2), final_price decimal(19,2), order_amount decimal(19,2), order_status varchar(255), payment_id bigint, payment_type varchar(255), user_id bigint, primary key (order_id))
+2021-02-02 13:40:55.819 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table payment_entry (payment_id bigint not null, amount decimal(19,2), generated_id varchar(255), name varchar(255), primary key (payment_id))
+2021-02-02 13:40:55.820 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table product_category (category_id bigint not null, category_description varchar(255), category_image_url varchar(255), category_name varchar(255), primary key (category_id))
+2021-02-02 13:40:55.821 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table product_info (product_id bigint not null, discount_percent double, product_description varchar(255), product_icon varchar(255), product_name varchar(255), product_price decimal(19,2), product_status varchar(255), product_stock integer, product_category bigint, primary key (product_id))
+2021-02-02 13:40:55.823 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table product_in_order (product_in_order_id bigint not null, discount_percent double, product_category varchar(255), product_description varchar(255), product_icon varchar(255), product_id bigint, product_name varchar(255), product_price decimal(19,2), product_stock integer, cart_id bigint, order_id bigint, primary key (product_in_order_id))
+2021-02-02 13:40:55.825 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table user (user_id bigint not null, password varchar(60), role varchar(10), username varchar(20), primary key (user_id))
+2021-02-02 13:40:55.826 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : create table user_details (user_details_id bigint not null, email_id varchar(255), first_name varchar(40), last_name varchar(40), phone_no varchar(10), security_answer varchar(10), security_question varchar(80), address_id bigint, primary key (user_details_id))
+2021-02-02 13:40:55.827 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+2021-02-02 13:40:55.831 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table cart add constraint FK_cart_id foreign key (user_details_id) references user_details
+2021-02-02 13:40:55.840 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table product_info add constraint FK_category_ID foreign key (product_category) references product_category
+2021-02-02 13:40:55.842 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table product_in_order add constraint FK_product_cart_ID foreign key (cart_id) references cart
+2021-02-02 13:40:55.844 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table product_in_order add constraint FKt0sfj3ffasrift1c4lv3ra85e foreign key (order_id) references order_main
+2021-02-02 13:40:55.847 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table user_details add constraint FK_ADDR_ID foreign key (address_id) references address
+2021-02-02 13:40:55.849 DEBUG 11788 --- [restartedMain] org.hibernate.SQL                        : alter table user_details add constraint FK_USER_ID foreign key (user_details_id) references user
+2021-02-02 13:40:55.854  INFO 11788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-02 13:40:55.864  INFO 11788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 13:40:55.929  WARN 11788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-02-02 13:40:56.449  WARN 11788 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-02-02 13:40:56.449  INFO 11788 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-02-02 13:40:56.547  WARN 11788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-02 13:40:56.817  INFO 11788 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 13:40:58.352  INFO 11788 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-02-02 13:40:58.387  WARN 11788 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-02-02 13:40:58.473  INFO 11788 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-02-02 13:40:58.598  INFO 11788 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-02-02 13:40:58.631  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-02-02 13:40:59.064  INFO 11788 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-02-02 13:40:59.064  INFO 11788 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-02-02 13:40:59.173  INFO 11788 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-02-02 13:40:59.173  INFO 11788 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-02-02 13:40:59.506  INFO 11788 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:40:59.884  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-02-02 13:40:59.885  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-02-02 13:40:59.886  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-02-02 13:40:59.887  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-02-02 13:40:59.887  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-02-02 13:40:59.887  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-02-02 13:40:59.888  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-02-02 13:41:02.679  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-02-02 13:41:02.682  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-02-02 13:41:02.685  INFO 11788 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-02-02 13:41:02.689  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1612253462687 with initial instances count: 0
+2021-02-02 13:41:02.700  INFO 11788 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DATABASE-SERVER with eureka with status UP
+2021-02-02 13:41:02.701  INFO 11788 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1612253462701, current=UP, previous=STARTING]
+2021-02-02 13:41:02.703  INFO 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DATABASE-SERVER/DESKTOP-EM6IPVG:database-server:9500: registering service...
+2021-02-02 13:41:02.728  INFO 11788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9500 (http) with context path ''
+2021-02-02 13:41:02.730  INFO 11788 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9500
+2021-02-02 13:41:02.963  INFO 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DATABASE-SERVER/DESKTOP-EM6IPVG:database-server:9500 - registration status: 204
+2021-02-02 13:41:03.100  INFO 11788 --- [restartedMain] c.c.d.DatabaseServerApplication          : Started DatabaseServerApplication in 17.955 seconds (JVM running for 19.474)
+2021-02-02 13:41:32.699  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-02-02 13:41:32.700  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-02-02 13:41:32.700  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-02-02 13:41:32.700  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-02-02 13:41:32.701  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-02-02 13:41:32.701  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2021-02-02 13:41:32.702  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-02-02 13:41:32.742  INFO 11788 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-02-02 13:45:59.939  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:51:00.072  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:56:00.084  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:01:01.255  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:06:01.283  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:11:01.471  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:16:01.484  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:21:01.492  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:26:01.512  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:31:01.524  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:36:01.582  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:41:01.652  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:46:01.734  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:51:01.844  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:56:01.893  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:01:01.982  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:06:02.008  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:11:02.025  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:16:02.026  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:21:02.037  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:26:02.053  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:31:02.111  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:36:02.126  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:41:02.154  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:46:02.171  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:51:02.186  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:56:02.196  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:01:02.197  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:06:02.201  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:11:02.205  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:16:02.225  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:21:02.464  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:26:02.472  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:31:02.537  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:36:02.567  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:41:02.976  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:46:03.109  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:51:03.146  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:56:03.170  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:01:03.187  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:06:03.196  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:11:03.207  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:16:03.316  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:21:03.350  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:26:03.472  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:31:03.490  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:36:03.517  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:41:03.554  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:46:03.566  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:51:03.580  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:56:03.597  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:01:03.654  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:06:03.669  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:11:03.682  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:16:03.693  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:21:03.703  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:26:03.712  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:31:03.722  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:36:03.736  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:41:03.748  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:46:03.755  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:51:03.768  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:56:03.779  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:01:03.784  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:06:03.861  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:11:03.873  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:16:04.039  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:21:04.049  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:26:04.061  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:31:04.067  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:36:04.072  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:41:04.081  INFO 11788 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:42:56.758  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-02 19:42:58.265  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DATABASE-SERVER with eureka with status DOWN
+2021-02-02 19:42:58.308 ERROR 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1612275178268, current=DOWN, previous=UP]
+2021-02-02 19:42:58.319  INFO 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DATABASE-SERVER/DESKTOP-EM6IPVG:database-server:9500: registering service...
+2021-02-02 19:43:02.065  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-02 19:43:03.876  WARN 11788 --- [RMI TCP Connection(387)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2021-02-02 19:43:03.952  INFO 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 more
+
+2021-02-02 19:43:03.953  WARN 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:04.740  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-02 19:43:06.111  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 19:43:07.957  WARN 11788 --- [RMI TCP Connection(387)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-02-02 19:43:07.998  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-02 19:43:08.092  INFO 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 more
+
+2021-02-02 19:43:08.093  WARN 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:08.182  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-02 19:43:08.352  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2021-02-02 19:43:08.453  WARN 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DATABASE-SERVER/DESKTOP-EM6IPVG:database-server:9500 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.10.7.jar:1.10.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_281]
+
+2021-02-02 19:43:08.462  WARN 11788 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.10.7.jar:1.10.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_281]
+
+2021-02-02 19:43:08.467  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2021-02-02 19:43:12.855  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:979)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 84 more
+
+2021-02-02 19:43:12.858  WARN 11788 --- [RMI TCP Connection(387)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:12.900 ERROR 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DATABASE-SERVER/DESKTOP-EM6IPVG:database-server:9500 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) [eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) [eureka-client-1.10.7.jar:1.10.7]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403) [spring-cloud-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142) [spring-cloud-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:979) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) [na:1.8.0_281]
+	at sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source) [na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_281]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_281]
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source) [na:1.8.0_281]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_281]
+
+2021-02-02 19:43:13.081  INFO 11788 --- [RMI TCP Connection(387)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

@@ -1,0 +1,853 @@
+2021-02-02 13:43:40.588  INFO 7092 --- [restartedMain] c.cg.authservice.AuthServiceApplication  : The following profiles are active: dev
+2021-02-02 13:43:44.093  INFO 7092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-02 13:43:44.206  INFO 7092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105ms. Found 4 JPA repository interfaces.
+2021-02-02 13:43:44.368  WARN 7092 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-02-02 13:43:44.647  INFO 7092 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=96007c8c-caa2-320e-a8c5-1b532a162ac0
+2021-02-02 13:43:46.823  INFO 7092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9100 (http)
+2021-02-02 13:43:46.833  INFO 7092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-02 13:43:46.833  INFO 7092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-02 13:43:47.032  INFO 7092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-02 13:43:47.033  INFO 7092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6423 ms
+2021-02-02 13:43:47.450  WARN 7092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-02-02 13:43:47.451  INFO 7092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-02-02 13:43:47.464  INFO 7092 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@42cf827d
+2021-02-02 13:43:47.571  INFO 7092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-02 13:43:48.209  INFO 7092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-02 13:43:48.217  INFO 7092 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9550/mem:mydb'
+2021-02-02 13:43:48.835  INFO 7092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-02 13:43:49.097  INFO 7092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-02 13:43:49.580  INFO 7092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-02 13:43:49.946  INFO 7092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-02 13:43:51.845  INFO 7092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-02 13:43:51.853  INFO 7092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 13:43:51.897  WARN 7092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-02-02 13:43:53.065  WARN 7092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-02 13:43:54.037  INFO 7092 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-02 13:43:54.392  INFO 7092 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d61d0a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@511d12d9, org.springframework.security.web.header.HeaderWriterFilter@274b413c, org.springframework.security.web.authentication.logout.LogoutFilter@65463d6d, com.cg.authservice.security.JwtAuthorizationFilter@3166c383, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@416a0554, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ee9882e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@260ae07f, org.springframework.security.web.session.SessionManagementFilter@50be1b30, org.springframework.security.web.access.ExceptionTranslationFilter@255e06a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64707c55]
+2021-02-02 13:43:54.402  WARN 7092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-02-02 13:43:54.402  INFO 7092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-02-02 13:43:54.562  INFO 7092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 13:43:55.199  INFO 7092 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-02-02 13:43:55.233  WARN 7092 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-02-02 13:43:55.428  INFO 7092 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-02-02 13:43:55.470  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-02-02 13:43:55.901  INFO 7092 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-02-02 13:43:55.902  INFO 7092 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-02-02 13:43:56.056  INFO 7092 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-02-02 13:43:56.056  INFO 7092 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-02-02 13:43:56.297  INFO 7092 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:43:56.494  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-02-02 13:43:56.494  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-02-02 13:43:56.494  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-02-02 13:43:56.494  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-02-02 13:43:56.495  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-02-02 13:43:56.495  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-02-02 13:43:56.495  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-02-02 13:43:56.733  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-02-02 13:43:56.738  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-02-02 13:43:56.741  INFO 7092 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-02-02 13:43:56.746  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1612253636745 with initial instances count: 2
+2021-02-02 13:43:56.749  INFO 7092 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2021-02-02 13:43:56.750  INFO 7092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1612253636750, current=UP, previous=STARTING]
+2021-02-02 13:43:56.753  INFO 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100: registering service...
+2021-02-02 13:43:56.787  INFO 7092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9100 (http) with context path ''
+2021-02-02 13:43:56.788  INFO 7092 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9100
+2021-02-02 13:43:56.820  INFO 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - registration status: 204
+2021-02-02 13:43:57.665  INFO 7092 --- [restartedMain] c.cg.authservice.AuthServiceApplication  : Started AuthServiceApplication in 19.844 seconds (JVM running for 22.73)
+2021-02-02 13:48:56.512  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:53:56.530  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 13:55:42.023  INFO 7092 --- [http-nio-9100-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-02 13:55:42.043  INFO 7092 --- [http-nio-9100-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-02 13:55:42.700  INFO 7092 --- [http-nio-9100-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 655 ms
+2021-02-02 13:55:44.722 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as col_0_0_ from user user0_ where user0_.username=? limit ?
+2021-02-02 13:55:44.826 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select userdetail0_.user_details_id as col_0_0_ from user_details userdetail0_ where userdetail0_.email_id=? limit ?
+2021-02-02 13:55:45.021 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : call next value for address_id_sequence
+2021-02-02 13:55:45.091 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : insert into address (area, city, pincode, state, address_id) values (?, ?, ?, ?, ?)
+2021-02-02 13:55:45.201 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : call next value for user_id_sequence
+2021-02-02 13:55:45.205 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : insert into user (password, role, username, user_id) values (?, ?, ?, ?)
+2021-02-02 13:55:45.206 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : insert into user_details (address_id, email_id, first_name, last_name, phone_no, security_answer, security_question, user_details_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-02-02 13:55:45.241 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : insert into cart (user_details_id) values (?)
+2021-02-02 13:57:18.164 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ cross join user user1_ where userdetail0_.user_details_id=user1_.user_id and (user1_.username=? or userdetail0_.email_id=?)
+2021-02-02 13:57:18.397 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 13:57:18.404 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:18.405 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:57:26.237 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 13:57:26.365 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 13:57:26.367 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 13:57:26.368 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:26.369 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:57:26.623 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 13:57:26.625 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 13:57:26.651 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 13:57:26.653 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:26.654 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:57:26.766 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 13:57:26.769 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 13:57:26.771 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 13:57:26.772 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:26.773 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:57:42.813 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 13:57:42.867 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 13:57:42.869 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:42.871 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:57:56.130 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 13:57:56.156 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 13:57:56.158 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 13:57:56.159 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 13:58:56.552  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:03:19.399 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 14:03:19.448 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 14:03:19.451 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 14:03:19.454 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 14:03:19.455 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 14:03:41.685 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 14:03:41.713 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 14:03:41.726 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 14:03:41.728 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 14:03:56.762  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:08:56.795  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:13:56.810  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:18:57.653  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:23:57.665  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:28:57.667  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:33:57.678  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:38:57.686  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:43:57.731  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:48:57.770  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:53:57.812  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 14:58:57.830  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:03:57.844  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:08:57.848  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:13:57.856  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:14:49.536 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ cross join user user1_ where userdetail0_.user_details_id=user1_.user_id and (user1_.username=? or userdetail0_.email_id=?)
+2021-02-02 15:14:49.775 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:14:49.781 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:14:49.783 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:14:52.070 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:14:52.373 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:14:52.375 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:14:52.376 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:14:52.378 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:14:52.437 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:14:52.441 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:14:52.474 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:14:52.475 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:14:52.476 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:14:52.787 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:14:52.790 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:14:52.791 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:14:52.792 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:14:52.793 DEBUG 7092 --- [http-nio-9100-exec-6] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:14:59.441 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:15:00.161 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:15:00.193 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:15:00.195 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:15:12.126 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:15:12.131 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:15:12.133 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:15:12.171 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:15:12.172 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:15:55.383 DEBUG 7092 --- [http-nio-9100-exec-9] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:15:55.393 DEBUG 7092 --- [http-nio-9100-exec-9] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:15:55.483 DEBUG 7092 --- [http-nio-9100-exec-9] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:15:55.484 DEBUG 7092 --- [http-nio-9100-exec-9] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:16:03.866 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:16:03.951 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:16:03.954 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:16:03.957 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:16:23.370 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:16:23.407 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:16:23.409 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:16:23.410 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:17:26.660 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:17:26.688 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:17:26.690 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:17:26.692 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:17:26.694 DEBUG 7092 --- [http-nio-9100-exec-3] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:17:39.938 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:17:39.949 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:17:39.956 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:17:39.960 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:17:39.963 DEBUG 7092 --- [http-nio-9100-exec-4] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:17:46.140 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:17:46.460 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:17:46.462 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:17:46.464 DEBUG 7092 --- [http-nio-9100-exec-5] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:18:57.867  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:20:34.505 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:20:34.576 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:20:34.577 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:20:34.578 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:20:34.579 DEBUG 7092 --- [http-nio-9100-exec-7] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:20:36.411 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:20:36.504 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:20:36.505 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:20:36.506 DEBUG 7092 --- [http-nio-9100-exec-8] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:23:57.882  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:28:57.903  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:33:57.927  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:38:40.976 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:38:40.984 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_, userdetail0_.address_id as address_8_5_, userdetail0_.email_id as email_id2_5_, userdetail0_.first_name as first_na3_5_, userdetail0_.last_name as last_nam4_5_, userdetail0_.phone_no as phone_no5_5_, userdetail0_.security_answer as security6_5_, userdetail0_.security_question as security7_5_ from user_details userdetail0_ left outer join user user1_ on userdetail0_.user_details_id=user1_.user_id where user1_.username=?
+2021-02-02 15:38:40.985 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select address0_.address_id as address_1_0_0_, address0_.area as area2_0_0_, address0_.city as city3_0_0_, address0_.pincode as pincode4_0_0_, address0_.state as state5_0_0_ from address address0_ where address0_.address_id=?
+2021-02-02 15:38:40.986 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:38:40.988 DEBUG 7092 --- [http-nio-9100-exec-10] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:38:43.972 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_, user0_.password as password2_4_, user0_.role as role3_4_, user0_.username as username4_4_ from user user0_ where user0_.username=?
+2021-02-02 15:38:43.987 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select userdetail0_.user_details_id as user_det1_5_0_, userdetail0_.address_id as address_8_5_0_, userdetail0_.email_id as email_id2_5_0_, userdetail0_.first_name as first_na3_5_0_, userdetail0_.last_name as last_nam4_5_0_, userdetail0_.phone_no as phone_no5_5_0_, userdetail0_.security_answer as security6_5_0_, userdetail0_.security_question as security7_5_0_, address1_.address_id as address_1_0_1_, address1_.area as area2_0_1_, address1_.city as city3_0_1_, address1_.pincode as pincode4_0_1_, address1_.state as state5_0_1_ from user_details userdetail0_ left outer join address address1_ on userdetail0_.address_id=address1_.address_id where userdetail0_.user_details_id=?
+2021-02-02 15:38:43.992 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_4_0_, user0_.password as password2_4_0_, user0_.role as role3_4_0_, user0_.username as username4_4_0_ from user user0_ where user0_.user_id=?
+2021-02-02 15:38:43.995 DEBUG 7092 --- [http-nio-9100-exec-1] org.hibernate.SQL                        : select cart0_.user_details_id as user_det1_1_0_ from cart cart0_ where cart0_.user_details_id=?
+2021-02-02 15:38:59.020  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:43:59.036  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:48:59.052  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:53:59.074  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 15:58:59.083  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:03:59.096  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:08:59.112  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:13:59.119  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:18:59.134  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:23:59.150  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:28:59.162  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:33:59.168  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:38:59.188  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:43:59.196  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:48:59.202  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:53:59.211  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 16:58:59.221  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:03:59.227  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:08:59.231  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:13:59.245  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:18:59.271  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:23:59.316  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:28:59.334  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:33:59.346  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:38:59.357  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:43:59.368  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:48:59.380  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:53:59.385  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 17:58:59.390  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:03:59.392  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:08:59.393  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:13:59.403  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:18:59.408  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:23:59.412  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:28:59.415  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:33:59.422  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:38:59.432  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:43:59.441  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:48:59.443  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:53:59.445  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 18:58:59.460  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:03:59.475  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:08:59.481  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:13:59.496  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:18:59.500  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:23:59.501  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:28:59.508  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:33:59.522  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:38:59.534  INFO 7092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-02-02 19:43:04.488  INFO 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:196)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:172)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1535)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1502)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 more
+
+2021-02-02 19:43:04.498  WARN 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:08.513  INFO 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:196)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:172)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1535)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1502)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 more
+
+2021-02-02 19:43:08.514  WARN 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:08.849  INFO 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1535)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1502)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-02-02 19:43:11.253  INFO 7092 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:103)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1461)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 26 more
+
+2021-02-02 19:43:11.254  WARN 7092 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:15.304  INFO 7092 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:103)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1461)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 27 more
+
+2021-02-02 19:43:15.304  WARN 7092 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:15.581 ERROR 7092 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1461) [eureka-client-1.10.7.jar:1.10.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_281]
+
+2021-02-02 19:43:36.495  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-02 19:43:37.602  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2021-02-02 19:43:37.602 ERROR 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1612275217602, current=DOWN, previous=UP]
+2021-02-02 19:43:37.603  INFO 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100: registering service...
+2021-02-02 19:43:39.223  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-02 19:43:39.355  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-02-02 19:43:39.518  WARN 7092 --- [RMI TCP Connection(383)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2021-02-02 19:43:39.838  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-02 19:43:40.140  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 19:43:41.157  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-02 19:43:41.340  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-02 19:43:41.399  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2021-02-02 19:43:41.763  INFO 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 more
+
+2021-02-02 19:43:41.763  WARN 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:41.765  WARN 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.10.7.jar:1.10.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_281]
+
+2021-02-02 19:43:41.766  WARN 7092 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.10.7.jar:1.10.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_281]
+
+2021-02-02 19:43:41.787  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2021-02-02 19:43:41.818  WARN 7092 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2021-02-02 19:43:42.892  INFO 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:196)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:172)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1535)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1502)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 more
+
+2021-02-02 19:43:42.892  WARN 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:42.893  INFO 7092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1535)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1502)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-02-02 19:43:45.839  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: connect stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:979)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 84 more
+
+2021-02-02 19:43:45.840  WARN 7092 --- [RMI TCP Connection(383)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-02-02 19:43:45.877 ERROR 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/DESKTOP-EM6IPVG:auth-service:9100 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) [eureka-client-1.10.7.jar:1.10.7]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) [eureka-client-1.10.7.jar:1.10.7]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403) [spring-cloud-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142) [spring-cloud-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085) [spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170) [spring-boot-2.3.8.RELEASE.jar:2.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:979) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) [spring-boot-2.3.8.RELEASE.jar:2.3.8.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) [na:1.8.0_281]
+	at sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source) [na:1.8.0_281]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source) [na:1.8.0_281]
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source) [na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_281]
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_281]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_281]
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source) [na:1.8.0_281]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_281]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source) [na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_281]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_281]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_281]
+
+2021-02-02 19:43:46.108  INFO 7092 --- [RMI TCP Connection(383)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
