@@ -1,0 +1,117 @@
+2021-01-28 10:11:46.654  INFO 10640 --- [restartedMain] c.cg.authservice.AuthServiceApplication  : The following profiles are active: test
+2021-01-28 10:11:51.697  INFO 10640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-28 10:11:52.045  INFO 10640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 346ms. Found 4 JPA repository interfaces.
+2021-01-28 10:11:52.369  INFO 10640 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=224b4e43-6dc7-334e-a0f1-fac7210298ed
+2021-01-28 10:11:53.117  INFO 10640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9100 (http)
+2021-01-28 10:11:53.211  INFO 10640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-28 10:11:53.211  INFO 10640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-28 10:11:53.238  INFO 10640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-28 10:11:53.240  INFO 10640 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6557 ms
+2021-01-28 10:11:53.484  INFO 10640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-01-28 10:11:53.928  INFO 10640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-01-28 10:11:53.928  INFO 10640 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2021-01-28 10:12:00.826  INFO 10640 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-28 10:12:00.833  INFO 10640 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-28 10:12:01.283 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists address CASCADE 
+2021-01-28 10:12:01.342 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists cart CASCADE 
+2021-01-28 10:12:01.343 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists order_main CASCADE 
+2021-01-28 10:12:01.343 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists product_in_order CASCADE 
+2021-01-28 10:12:01.343 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-01-28 10:12:01.343 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user_details CASCADE 
+2021-01-28 10:12:01.344 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists address_id_sequence
+2021-01-28 10:12:01.344 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists order_id_sequence
+2021-01-28 10:12:01.344 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists product_order_id_sequence
+2021-01-28 10:12:01.345 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists user_id_sequence
+2021-01-28 10:12:01.348 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create sequence address_id_sequence start with 100000 increment by 1
+2021-01-28 10:12:01.351 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create sequence order_id_sequence start with 100000 increment by 1
+2021-01-28 10:12:01.352 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create sequence product_order_id_sequence start with 100000 increment by 1
+2021-01-28 10:12:01.353 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create sequence user_id_sequence start with 100000 increment by 1
+2021-01-28 10:12:01.354 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table address (address_id bigint not null, area varchar(50), city varchar(50), pincode varchar(6), state varchar(50), primary key (address_id))
+2021-01-28 10:12:01.362 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table cart (user_details_id bigint not null, primary key (user_details_id))
+2021-01-28 10:12:01.363 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table order_main (order_id bigint not null, buyer_address varchar(255), buyer_city varchar(255), buyer_email varchar(255), buyer_name varchar(255), buyer_phone varchar(255), buyer_pincode varchar(255), buyer_state varchar(255), delivery_charge decimal(19,2), discounted_amount decimal(19,2), final_price decimal(19,2), order_amount decimal(19,2), order_status varchar(255), payment_id bigint, payment_type varchar(255), user_id bigint, primary key (order_id))
+2021-01-28 10:12:01.364 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table product_in_order (product_in_order_id bigint not null, discount_percent double, product_category varchar(255), product_description varchar(255), product_icon varchar(255), product_id bigint, product_name varchar(255), product_price decimal(19,2), product_stock integer, cart_id bigint, order_id bigint, primary key (product_in_order_id))
+2021-01-28 10:12:01.367 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table user (user_id bigint not null, password varchar(60), role varchar(10), username varchar(20), primary key (user_id))
+2021-01-28 10:12:01.371 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : create table user_details (user_details_id bigint not null, email_id varchar(255), first_name varchar(40), last_name varchar(40), phone_no varchar(10), security_answer varchar(10), security_question varchar(80), address_id bigint, primary key (user_details_id))
+2021-01-28 10:12:01.374 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+2021-01-28 10:12:01.379 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table cart add constraint FK_cart_id foreign key (user_details_id) references user_details
+2021-01-28 10:12:01.399 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table product_in_order add constraint FK_product_cart_ID foreign key (cart_id) references cart
+2021-01-28 10:12:01.403 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table product_in_order add constraint FKt0sfj3ffasrift1c4lv3ra85e foreign key (order_id) references order_main
+2021-01-28 10:12:01.405 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table user_details add constraint FK_ADDR_ID foreign key (address_id) references address
+2021-01-28 10:12:01.413 DEBUG 10640 --- [restartedMain] org.hibernate.SQL                        : alter table user_details add constraint FK_USER_ID foreign key (user_details_id) references user
+2021-01-28 10:12:01.417  INFO 10640 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-28 10:12:01.418  INFO 10640 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-28 10:12:01.449  WARN 10640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-01-28 10:12:01.931  WARN 10640 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-28 10:12:02.538  INFO 10640 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-28 10:12:02.698  INFO 10640 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38025009, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c8f7016, org.springframework.security.web.header.HeaderWriterFilter@2836559c, org.springframework.security.web.authentication.logout.LogoutFilter@57515088, com.cg.authservice.security.JwtAuthorizationFilter@2ea4b65a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9e38107, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1363bf12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6472dc7, org.springframework.security.web.session.SessionManagementFilter@7752857a, org.springframework.security.web.access.ExceptionTranslationFilter@6f675bc3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@726df2fe]
+2021-01-28 10:12:02.710  WARN 10640 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-01-28 10:12:02.710  INFO 10640 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-01-28 10:12:02.885  INFO 10640 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-28 10:12:06.003  INFO 10640 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-01-28 10:12:06.012  WARN 10640 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-01-28 10:12:06.065  INFO 10640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9100 (http) with context path ''
+2021-01-28 10:12:06.691  INFO 10640 --- [restartedMain] c.cg.authservice.AuthServiceApplication  : Started AuthServiceApplication in 25.27 seconds (JVM running for 54344.266)
+2021-01-28 10:12:06.699  INFO 10640 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   EurekaClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (eureka.client.enabled) found different value in property 'eureka.client.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'com.netflix.discovery.EurekaClientConfig' (OnClassCondition)
+
+   EurekaDiscoveryClientConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (eureka.client.enabled) found different value in property 'eureka.client.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'com.netflix.discovery.EurekaClientConfig' (OnClassCondition)
+
+   LoadBalancerEurekaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (eureka.client.enabled) found different value in property 'eureka.client.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientConfigurationRegistrar' (OnClassCondition)
+
+   RibbonEurekaAutoConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 2 did not; NestedCondition on ConditionalOnRibbonAndEurekaEnabled.OnRibbonAndEurekaEnabledCondition.OnEurekaClientEnabled found non-matching nested conditions @ConditionalOnProperty (eureka.client.enabled) found different value in property 'eureka.client.enabled', @ConditionalOnProperty (eureka.client.enabled) found different value in property 'eureka.client.enabled'; NestedCondition on ConditionalOnRibbonAndEurekaEnabled.OnRibbonAndEurekaEnabledCondition.EurekaBeans @ConditionalOnBean (types: com.netflix.discovery.EurekaClient; SearchStrategy: all) did not find any beans of type com.netflix.discovery.EurekaClient; NestedCondition on ConditionalOnRibbonAndEurekaEnabled.OnRibbonAndEurekaEnabledCondition.Defaults found matching nested conditions @ConditionalOnClass found required class 'com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList', @ConditionalOnBean (types: org.springframework.cloud.netflix.ribbon.SpringClientFactory; SearchStrategy: all) found bean 'springClientFactory', @ConditionalOnProperty (ribbon.eureka.enabled) matched (ConditionalOnRibbonAndEurekaEnabled.OnRibbonAndEurekaEnabledCondition)
+
+   ServiceRegistryAutoConfiguration.ServiceRegistryEndpointConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cloud.client.serviceregistry.ServiceRegistry; SearchStrategy: all) did not find any beans of type org.springframework.cloud.client.serviceregistry.ServiceRegistry (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.boot.actuate.endpoint.annotation.Endpoint' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2021-01-28 10:24:04.349  INFO 10640 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-28 10:24:04.351  INFO 10640 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-28 10:24:04.643  WARN 10640 --- [Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-01-28 10:24:04.643  INFO 10640 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-01-28 10:24:04.835  INFO 10640 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

@@ -37,9 +37,17 @@ INSERT INTO product_category(category_id, category_name, category_description, c
 
 INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100003, 'Apparel', 'Clothes for Men, Women and Child', 'https://static.fibre2fashion.com/Newsresource/images/251/apparel-11_262804.jpg');
 
--- TODO Add 4 more category
+INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100004, 'Chocolates & Cookies', 'Shop online our delicious selection of chocolate and cookie gifts', 'https://previews.123rf.com/images/scorpionka/scorpionka1604/scorpionka160400062/57151971-many-diffrent-chocolates-and-cookies.jpg');
 
-ALTER sequence category_id_sequence restart with 100007;
+INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100005, 'Flowers', 'Buy/Send Flowers to your loved ones from the best Florist', 'https://miro.medium.com/max/3840/1*m5j79jCBbX0GSbTp8VbXeg.jpeg');
+
+INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100006, 'Corporate Gifts', 'Order The Best Corporate Gifts from Gift Shop', 'https://pegasusevents.in/wp-content/uploads/2019/06/best-corporate-gifting-solutions-in-delhi-4.jpg');
+
+INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100007, 'Watches', 'Choose from new collection of Watches Online in Gift Store', 'https://media.gq.com/photos/5d93b28c3304070008faa5a0/16:9/pass/watches.jpg');
+
+INSERT INTO product_category(category_id, category_name, category_description, category_image_url) VALUES (100008, 'Cakes', 'Send Cake online from best cake shop in India', 'https://www.biggerbolderbaking.com/wp-content/uploads/2016/02/BBB113-Vanilla-Celebration-Cake-FINAL.jpg');
+
+ALTER sequence category_id_sequence restart with 100009;
 
 INSERT INTO cart VALUES (100001);
 INSERT INTO cart VALUES (100002);
@@ -73,10 +81,55 @@ INSERT INTO product_info (product_id, product_name, product_price, product_stock
 
 INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100011, 'Gift Clothing', 200, 399, 'Apparels that can be given as gifts to your loved onces', 'https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_784,q_75,w_1050/https://assets.simpleviewinc.com/simpleview/image/upload/crm/knoxville/virginia-jane0-b099cffc5056a34_b099d18d-5056-a348-3aabf0e49069ae2f.jpg', 'DISABLED', 100003, 30);
 
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100012, 'Vanilla Cake', 900, 5, 'Tasty Vanilla Cake', 'https://www.thespruceeats.com/thmb/lPBHmMNr71B6No0KzwCiczhMHSg=/2048x1152/smart/filters:no_upscale()/fluffy-homemade-vanilla-cake-995187_18_preview-5afddc4c8023b900369a9cbd.jpeg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100013, 'Strawberry Cake', 900, 4, 'Cake created from pure farm harvested strawberries', 'https://i.ytimg.com/vi/6Zx7dm0Y1sk/maxresdefault.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100014, 'Butter Cream Cake', 1200, 10, 'Vanialla and Butter Cream', 'https://www.bakefromscratch.com/wp-content/uploads/2020/02/Heilala-Cake-Web-696x557.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100015, 'Vanilla and Chocolate', 1800, 5, 'Chocolate cake with Vanilla Essence', 'https://i1.wp.com/sugarspiceslife.com/wp-content/uploads/2018/06/Vanilla-Cake-with-Chocolate-Buttercream.jpg?resize=1024%2C683&ssl=1', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100016, 'White Strawberry Cake', 2200, 5, 'Large White strawberry Cake', 'https://naturallysweetkitchen.com/wp-content/uploads/2018/06/white-chocolate-raspberry-ripple-cake-1-min.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100017, 'Chocolate Cake', 1200, 5, 'Famaliarity of Kitkats and Gems', 'https://1.bp.blogspot.com/-zZb0fDgZ_wI/XQh1UczYp0I/AAAAAAABE7c/qpGYi0dOUps4TmMSOdVKD89ggicIyZ2iACKgBGAs/s1600/DSC_0058%2B%25282%2529.JPG', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100018, 'Black Forest', 900, 5, 'Taste the Simplicity', 'https://i2.wp.com/www.dessertsrequired.com/wp-content/uploads/2013/02/IMG_0572.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100019, 'Vanilla', 700, 5, 'Vanilla with Chocolate Syrub', 'https://farm8.staticflickr.com/7147/6664976631_42336e70f2_o.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100020, 'Sponge Cake', 800, 5, 'Chocolate Sponge Cake', 'https://www.twosisterscrafting.com/wp-content/uploads/2016/03/the-best-chocolate-buttercream-frosting-pinnable5-720x405.jpg', 'ENABLED', 100008, 50);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100021, 'Mens Watch', 1200, 5, 'Classic Mens Watch', 'https://www.swissarma.ch/wp-content/uploads/2016/11/A-Lange-Sohne-Richard-Lange-Perpetual-Calendar-Terraluna-180.026-A1-3.jpg', 'ENABLED', 100007, 10);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100022, 'Pink Watch', 1200, 5, 'Pink Watch', 'https://staticimg.titan.co.in/Sonata/Catalog/8976SL14_1.jpg', 'ENABLED', 100007, 10);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100023, 'Kids Watch', 800, 5, 'Stylish Kids watches', 'https://www.scarymommy.com/wp-content/uploads/2020/06/Kids_5_watch.jpg', 'ENABLED', 100007, 10);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100024, 'Gold Watch', 3000, 5, 'Stylish Gold watch', 'https://timeandtidewatches.com/wp-content/uploads/2018/09/Tudor-BB-SG-champagne-5.jpg', 'DISABLED', 100007, 10);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100025, 'Wall Clock', 5000, 5, 'Colorful Peacock wall clock', 'https://images-na.ssl-images-amazon.com/images/I/81c6OsyJeIL._SL1500_.jpg', 'ENABLED', 100007, 10);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100026, 'Wedding Flower', 9000, 5, 'Traditional Wedding Bouquet', 'https://i.ytimg.com/vi/I6atZta4U_o/maxresdefault.jpg', 'ENABLED', 100005, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100027, 'Wedding Bouquet', 5000, 5, 'Colorful Wedding Bouquet', 'https://previews.123rf.com/images/kapu/kapu1405/kapu140500111/28171147-wedding-flower-bouquet.jpg', 'ENABLED', 100005, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100028, 'Small Bouquet', 5000, 0, 'Light shade wedding Bouquet', 'https://cdn.shopify.com/s/files/1/0616/8037/files/the-best-wedding-flowers-by-wellington-florists-in-New-Zealand_480x480.jpg?v=1552188217', 'ENABLED', 100005, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100029, 'Rose Bouquet', 5000, 5, 'Rose basket Shaped Boquet', 'https://previews.123rf.com/images/gorlovkv/gorlovkv1802/gorlovkv180200067/95969210-beautiful-bouquet-of-red-roses-iin-form-of-heart-flowers-in-wicker-basket-flower-market-or-shop-flor.jpg', 'ENABLED', 100005, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100030, 'Chocolates & Flowers', 5000, 5, 'Best Valentines Gift for your loved one', 'https://www.wallpaperup.com/uploads/wallpapers/2014/03/08/291225/d49965f94a16271a8ce02b8ad1d88325-700.jpg', 'ENABLED', 100005, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100031, 'Cookies', 5000, 5, 'Tasty Home baked Cookies', 'https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg', 'ENABLED', 100004, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100032, 'Festive Chocolates', 5000, 5, 'Best Valentines Gift for your loved one', 'https://rewardbloggers.com/assets/upload/1568360443.jpg', 'ENABLED', 100004, 40);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100033, 'Wallet', 1000, 20, 'Pen and Wallet with a box', 'https://static.connect2india.com/c2icd/product_resources/images/corporate-gifts-set.jpg', 'ENABLED', 100006, 60);
+
+INSERT INTO product_info (product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, product_category, discount_percent) VALUES (100034, 'Diary', 2000, 20, 'Note taking Diary with a gift box', 'https://ds393qgzrxwzn.cloudfront.net/resize/m600x500/cat1/img/images/0/nn2u4pFpiF.jpg', 'ENABLED', 100006, 60);
 
 -- TODO Add 25 more items
 
-ALTER sequence product_id_sequence restart with 100026;
+ALTER sequence product_id_sequence restart with 100035;
 
 -- ORDER Table
 INSERT INTO ORDER_MAIN (order_id, buyer_address, buyer_city, buyer_email, buyer_pincode, buyer_state, buyer_name, buyer_phone, order_amount, order_status, payment_type, payment_id, user_id, discounted_amount, delivery_charge, final_price) VALUES (100001, 'Powai, near D-Mart', 'Mumbai', 'gagandeep@mail.com', '400072', 'Maharashtra', 'Gagandeep Singh', '8419969059', 4000, 'DISPATCHED', 'ONLINE', '100001', 100001, 840, 120, 960);

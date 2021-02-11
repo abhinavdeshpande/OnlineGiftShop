@@ -1,0 +1,104 @@
+/**
+ * @author Gagandeep Singh
+ * @email singh.gagandeep3911@gmail.com
+ * @create date 2021-02-08 19:33:44
+ * @modify date 2021-02-08 19:33:44
+ * @desc [description]
+ */
+//  Launch SONAR using docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+pipeline =  {
+    stage('Checkout') {
+        SERVICE = 'auth-service'
+        // bat 'if exist auth-service rmdir /s /q auth-service'
+        // bat 'dir'
+        bat "xcopy /E D:\\Workspaces\\vscode_workspace\\gift-shop\\${SERVICE} /i ${SERVICE} /Y"
+    }
+    stage('Preparation') {
+        dir(SERVICE) {
+            
+        bat 'dir'
+            pom = readMavenPom file: 'pom.xml'
+            bat 'echo pom.version'
+            IMAGE = pom.artifactId
+            VERSION = pom.version
+            // bat 'chmod +x mvnw'
+        }
+    }
+    stage ('Compile Stage') {
+        dir(SERVICE) {
+            bat './mvnw clean compile'
+        }
+    } 
+    stage ('Testing Stage') {
+        dir(SERVICE) {
+            bat './mvnw test'
+        }
+    }
+    // Required for code coverage
+    stage('Jacoco Static Analysis') {
+        dir (SERVICE) {
+            //*** Codeanalysis with Maven plugin
+            step([$class: 'JacocoPublisher', 
+                execPattern: 'target/*.exec',
+                classPattern: 'target/classes',
+                sourcePattern: 'src/main/java',
+                exclusionPattern: 'src/test*'
+            ])
+            //*** Direct code analysis
+            // bat './mvnw verify'
+        }
+    }
+    stage('Sonar Scanner Coverage') {
+        dir (SERVICE) {
+            withCredentials([string(credentialsId: 'sonarToken', variable: 'sonarLogin')]) {
+                //  sonarLogin = credentials('sonarToken')
+                // sonarLogin = "0cf6d50605c395cf20f770ca347f5c53e201296c"
+                sonarUrl = 'http://ip172-18-0-39-c0gp1536hnp000djbmm0-9000.direct.labs.play-with-docker.com/'
+                bat "./mvnw sonar:sonar -Dsonar.login=${sonarLogin} -Dsonar.host.url=${sonarUrl}"
+            }
+        }
+    }
+    stage ('Package Stage') {
+        dir(SERVICE) {
+            bat './mvnw clean package'
+        }
+    }
+    stage ('Build/Publish') {
+        dir (SERVICE) {
+            // bat "nohup java -jar ./target/auth-service-0.0.1-SNAPSHOT.jar --spring.profiles.active=test"
+        }
+    }
+    stage ('Deploy on this Server') {
+        dir (SERVICE) {
+            bat 'echo "Deployment step, not yet Implemented!! <3 :D"'
+        }
+    }
+}
+
+postFailure = {
+    def to = emailextrecipients([
+        [$class: 'CulpritsRecipientProvider'],
+        [$class: 'DevelopersRecipientProvider'],
+        [$class: 'RequesterRecipientProvider']
+    ])
+
+    currentBuild.result = 'FAILURE'
+    // set variables
+    def subject = "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} ${currentBuild.result}"
+    def content = '${JELLY_SCRIPT,template="html"}'
+    // send email
+    if (to != null && !to.isEmpty()) {
+        emailext(body: content, mimeType: 'text/html',
+                replyTo: '$DEFAULT_REPLYTO', subject: subject,
+                to: to, attachLog: true )
+    }
+}
+
+node {
+    try {
+        pipeline()
+    }
+    catch (e) {
+        postFailure()
+    }
+}

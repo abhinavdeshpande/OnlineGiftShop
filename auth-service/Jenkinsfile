@@ -1,0 +1,90 @@
+
+pipeline =  {
+    stage('Checkout') {
+        checkout scm
+    }
+    stage('Preparation') {
+        dir('auth-service') {
+            pom = readMavenPom file: 'pom.xml'
+            sh 'echo pom.version'
+            IMAGE = pom.artifactId
+            VERSION = pom.version
+            sh 'chmod +x mvnw'
+        }
+    }
+    stage ('Compile Stage') {
+        dir('auth-service') {
+            sh'./mvnw clean compile'
+        }
+    } 
+    stage ('Testing Stage') {
+        dir('auth-service') {
+            sh'./mvnw test'
+        }
+    }
+    stage ('Package Stage') {
+        dir('auth-service') {
+            sh'./mvnw clean package'
+        }
+    }
+    stage('Sonar Scanner') {
+        dir ('auth-service') {
+            sh 'echo Sonar Quality check, not yet Implemented!! <3 :D'
+            // SONAR = credentials('sonar')
+            // sh './mvnw sonar:sonar -Dsonar.login=${sonarLogin} -Dsonar.host.url=http://sonarqube:9000'
+
+            // ------------------------------------------------------------------------
+
+            // def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+            // withCredentials([string(credentialsId: 'sonar', variable: 'sonarLogin')]) {
+            // sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=auth-service -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=GS -Dsonar.sources=src/main/ -Dsonar.tests=src/test/ -Dsonar.language=java -Dsonar.java.binaries=."
+            // }
+        }
+    }
+    stage ('Build/Publish') {
+        dir ('auth-service') {
+            sh 'echo Publish step, not yet Implemented!! <3 :D'
+            // docker.withRegistry('https://index.docker.io/v1/', 'docker') {
+            // docker.build("gagandeep39/gift-shop-auth-service:${VERSION}", '.').push()
+            // docker.build("gagandeep39/auth-service:latest", '.').push()
+            // }
+        }
+    }
+    stage ('Deploy on this Server') {
+        dir ('auth-service') {
+            sh 'echo Deployment step, not yet Implemented!! <3 :D'
+            // sh 'echo ${VERSION}'
+            // sh 'docker stop auth-service || echo Container is not on'
+            // sh 'docker container rm -f auth-service || echo Container doesnt exists'
+            // docker.image('gagandeep39/auth-service:' + VERSION).run('-p 9100:9100 -p 9050:9050 --link remote-mysql --link employee-eureka-server --name auth-service -m=800m')
+            // sh 'docker image prune -f'
+        }
+    }
+}
+postFailure = {
+    def to = emailextrecipients([
+        [$class: 'CulpritsRecipientProvider'],
+        [$class: 'DevelopersRecipientProvider'],
+        [$class: 'RequesterRecipientProvider']
+    ])
+
+    currentBuild.result = 'FAILURE'
+    // set variables
+    def subject = "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} ${currentBuild.result}"
+    def content = '${JELLY_SCRIPT,template="html"}'
+    // send email
+    if (to != null && !to.isEmpty()) {
+        emailext(body: content, mimeType: 'text/html',
+                replyTo: '$DEFAULT_REPLYTO', subject: subject,
+                to: to, attachLog: true )
+    }
+}
+
+node {
+    try {
+        pipeline()
+    }
+    catch (e) {
+        postFailure()
+    }
+}
